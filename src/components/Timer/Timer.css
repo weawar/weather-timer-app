@@ -1,0 +1,116 @@
+.timer-widget {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 350px;
+  text-align: center;
+}
+
+.timer-widget h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.timer-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.time-text {
+  color: #495057;
+  font-family: 'Courier New', monospace;
+}
+
+.expired-text {
+  color: #dc3545;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.timer-controls button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.timer-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.toggle-btn:hover:not(:disabled) {
+  background: #5a6268;
+}
+
+.toggle-btn.running {
+  background: #28a745;
+}
+
+.toggle-btn.running:hover:not(:disabled) {
+  background: #218838;
+}
+
+.restart-btn {
+  background: #007bff;
+  color: white;
+}
+
+.restart-btn:hover {
+  background: #0056b3;
+}
+
+.restart-btn.highlight {
+  background: #ffc107;
+  color: #212529;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.restart-btn.highlight:hover {
+  background: #e0a800;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6c757d;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #dc3545;
+  background: #f8f9fa;
+}
